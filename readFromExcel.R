@@ -12,9 +12,9 @@ createCSVFiles <- function(path){
       data = readWorksheet(workbook,
                            sheet=sheet)
 
-      write.csv(data, file=paste(tools::file_path_sans_ext(file),
-                                 "-",
-                                 sheet,".csv",sep=""))
+      write.csv(data,
+                file=paste(tools::file_path_sans_ext(file),"-",sheet,".csv",sep=""),
+                row.names=FALSE)
     }
   }
 }
